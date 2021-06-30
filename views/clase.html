@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google ClassRoom</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://kit.fontawesome.com/c0d32cfc92.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="collapse" id="navbar-vertical">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark background_nav pb-0">
+        <button class="btn my-2 my-sm-0" type="button"  data-toggle="collapse" data-target="#navbar-vertical" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars btn-barras btns-nav fa-lg"></i></button>
+        <div>
+            <a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>POO</strong></small></a>
+            <p class="mb-0"><small>1300</small></p>
+        </div>
+        <div class="nav nav-tabs div-nav-clase" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-clase-tab" data-toggle="tab" href="#nav-clase" role="tab" aria-controls="nav-clase" aria-selected="true">Clase</a>
+            <a class="nav-item nav-link" id="nav-asignaciones-tab" data-toggle="tab" href="#nav-asignaciones" role="tab" aria-controls="nav-asignaciones" aria-selected="false">Asignaciones</a>
+            <a class="nav-item nav-link" id="nav-participantes-tab" data-toggle="tab" href="#nav-participantes" role="tab" aria-controls="nav-participantes" aria-selected="false">Participantes</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+                <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-cog btns-nav fa-lg"></i></button>
+                <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-th btns-nav fa-lg"></i></button>
+                <button class="btn my-2 my-sm-0" type="submit"><img class="img-profile" src="../src/profile-pics/androide_16.jpg" alt=""></button>
+            </form>
+        </div>
+    </nav>
+    <hr class="hr">
+    <div class="container">
+        <div class="row">
+            <div class="tab-content w-100" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-clase" role="tabpanel" aria-labelledby="nav-clase-tab">
+                    <!--Clase-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-1 col-md-1 col-sm-1"></div>
+                            <div class="col-xl-10 col-md-10 col-sm-10" >
+                                <div class="card text-white border-card sombra">
+                                    <img class="card-img border-card-img" src="../src/img/img_reachout.jpg" alt="Card image">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">Programacion 2</h5>
+                                        <p class="card-text">1300</p>
+                                        <p class="card-text"><strong>Codigo</strong> 421dffd</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text txt-card"><strong>Descripcion:</strong> Esta es la clase de POO</p>
+                                        <p class="card-text txt-card"><strong>Aula</strong> 421</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-1 col-md-1 col-sm-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-1 col-md-1 col-sm-1"></div>
+                            <div class="col-xl-3 col-md-3 col-sm-3">
+                                <div class="card border-card sombra">
+                                    <div class="card-body text-secondary">
+                                        <h6 class="card-title">Proximas entregas</h6>
+                                        <p class="card-text">No tienes ninguna tarea oara esta semana.</p>
+                                        <div class="div-btn-vertodo">
+                                            <a class="btn-vertodo" href="">Ver todo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-md-7 col-sm-7" >
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12">
+                                            <div class="card text-white border-card sombra">
+                                                <form class="form-inline form-anuncio">
+                                                    <div class="form-group form-group-anuncio">
+                                                        <label for="inputAnuncio"><img class="img-profile" src="../src/profile-pics/androide_16.jpg" alt=""></label>
+                                                        <input type="text" id="inputAnuncio" class="form-control mx-sm-3 input-anuncio" placeholder="Anuncia algo a tu clase">
+                                                        <div class="ml-auto">
+                                                            <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-retweet btns-nav fa-lg"></i></button>
+                                                        </div>
+                                                    </div>  
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-12 col-md-12 col-sm-12">
+                                            <div class="card text-white border-card">
+                                                <form class="form-inline form-anuncio">
+                                                    <div class="form-group form-group-anuncio pt-1 pb-1 pl-1">
+                                                        <h5 class="title-color title-comunicate"> Comunicate con tu clase aqui</h5> <br>
+                                                        <div class="w-100">
+                                                            <button class="btn my-2 my-sm-0 pl-0" type="submit"><i class="far fa-comment-alt btns-nav fa-lg"></i><a class="ml-2">Crea y programa anuncios</a></button>
+                                                        </div>
+                                                        <div class="w-100">
+                                                            <button class="btn my-2 my-sm-0 pl-0" type="submit"><i class="fas fa-comment-alt fa-lg "></i><a class="ml-2"> Responde a las publicaciones de los alumnos</a></button>
+                                                        </div>
+                                                    </div>  
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-1 col-md-1 col-sm-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade w-100 tab-asignaciones" id="nav-asignaciones" role="tabpanel" aria-labelledby="nav-asignaciones-tab">
+                    <!---asignaciones-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12">
+                                <div class="row">
+                                    <div class="mb-4">
+                                        <button class="btn btn-primary my-2 my-sm-0 btn-nueva-asignacion" type="submit"><i class="fas fa-plus btns-nav fa-lg icn-plus"></i> Nueva asignacion</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="table-responsive align-middle">
+                                <tbody>
+                                    <tr class="border border-table">
+                                        <td><button class="btn" type="submit"><img class="img-profile" src="../src/profile-pics/androide_16.jpg" alt=""></button><strong>Proyecto 1</strong></td>
+                                        <td>12/12/12</td>
+                                    </tr>
+                                    <tr class="border border-table">
+                                        <td><button class="btn" type="submit"><img class="img-profile" src="../src/profile-pics/androide_16.jpg" alt=""></button><strong>Proyecto 1</strong></td>
+                                        <td>12/12/12</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-participantes" role="tabpanel" aria-labelledby="nav-participantes-tab">contact</div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/controlador.js"></script>
+</body>
+</html>
