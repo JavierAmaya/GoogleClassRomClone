@@ -1,2 +1,40 @@
 /*main css*/
 
+.title-classRoom{
+    color: gray!important;
+}
+
+.img-logo{
+    padding-left: 10px;
+}
+
+.btns-nav{
+    color: #797979;
+    border-color: transparent;
+}
+
+.img-profile{
+    width: 40px;
+    border-radius: 30px;
+}
+
+.header-card{
+    background: url(../src/img/img_reachout.jpg);
+}
+.titleCardModal{
+    margin-bottom: -56px;
+}
+
+.title-descrip {
+    color: white;
+    margin-left: 15px;
+}
+
+.title-card{
+    margin-bottom: 0;
+}
+
+.footer-card{
+    text-align: right;
+    padding: 5px;
+}
