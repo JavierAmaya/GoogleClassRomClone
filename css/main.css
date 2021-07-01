@@ -126,3 +126,27 @@ tbody {
 .tab-asignaciones{
     margin-top: 50px;
 }
+
+.ta-r{
+    text-align:right ;
+}
+
+.c-b{
+    color: #206bd3;
+}
+
+.bc-b{
+    border-color: #206bd3;
+}
+
+.ta-c{
+    text-align: center;
+}
+
+.navbar-vertical{
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: white
+}
+

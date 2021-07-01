@@ -10,12 +10,6 @@
     <script src="https://kit.fontawesome.com/c0d32cfc92.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="collapse" id="navbar-vertical">
-        <div class="bg-dark p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-    </div>
     <nav class="navbar navbar-expand-md navbar-dark background_nav pb-0">
         <button class="btn my-2 my-sm-0" type="button"  data-toggle="collapse" data-target="#navbar-vertical" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars btn-barras btns-nav fa-lg"></i></button>
         <div>
@@ -131,11 +125,11 @@
                                 <tbody>
                                     <tr class="border border-table">
                                         <td><button class="btn" type="submit"><img class="img-profile" src="../src/profile-pics/androide_16.jpg" alt=""></button><strong>Proyecto 1</strong></td>
-                                        <td>12/12/12</td>
+                                        <td class="ta-r">12/12/12</td>
                                     </tr>
                                     <tr class="border border-table">
                                         <td><button class="btn" type="submit"><img class="img-profile" src="../src/profile-pics/androide_16.jpg" alt=""></button><strong>Proyecto 1</strong></td>
-                                        <td>12/12/12</td>
+                                        <td class="ta-r">12/12/12</td>
                                     </tr>
                                     
                                 </tbody>
@@ -143,9 +137,104 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-participantes" role="tabpanel" aria-labelledby="nav-participantes-tab">contact</div>
+                <div class="tab-pane fade" id="nav-participantes" role="tabpanel" aria-labelledby="nav-participantes-tab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="c-b">Profesores</h1>
+                            </div>
+                            <div class="col-6 ta-r">
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-user-plus btns-nav c-b"></i></button>
+                            </div>
+                        </div>
+                        <hr class="bc-b">
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <button class="btn" type="submit"><img class="img-profile" src="../src/profile-pics/androide_16.jpg" alt=""></button><strong>Goku</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="c-b">Estudiantes</h1>
+                            </div>
+                            <div class="col-6 ta-r">
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-user-plus btns-nav c-b"></i></button>
+                            </div>
+                        </div>
+                        <hr class="bc-b">
+                        <div class="row">
+                            <div class="col-12 ta-c">
+                                <img src="../src/img/empty_states.png" alt="">
+                                <p><strong>Invita estudiantes a tu clase</strong></p>
+                                <button class="btn btn-primary" type="button">Invitar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
+        </div>
+    </div>
+    <!---div oculto-->
+    <div class="collapse navbar-vertical sombra mt-0 p-4" id="navbar-vertical">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="border-divs">
+                        <button class="btn my-2 my-sm-0 ml-auto" type="button"  data-toggle="collapse" data-target="#navbar-vertical" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars btn-barras btns-nav fa-lg"></i></button>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-3 mt-4">
+                                <div onclick="returnIndex()"><i class="fas fa-home btns-nav fa-lg ml-4"></i><a class="a-nav-vertical"> Todas las clases</a></div>
+                                <hr>
+                            </li>
+                            <h6>Clases</h6>
+                            <br>
+                            <div>
+                                <li class="nav-item mb-3">
+                                    <div class="row">
+                                        <div class="col-3 pb-0">
+                                            <img class="img-profile mt-2" src="../src/profile-pics/androide_16.jpg" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>POO</strong></small></a></div>
+                                                <div class="col-12"><p class="mb-0"><small>1300</small></p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item mb-3">
+                                    <div class="row">
+                                        <div class="col-3 pb-0">
+                                            <img class="img-profile mt-2" src="../src/profile-pics/androide_16.jpg" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>POO</strong></small></a></div>
+                                                <div class="col-12"><p class="mb-0"><small>1300</small></p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item mb-3">
+                                    <div class="row">
+                                        <div class="col-3 pb-0">
+                                            <img class="img-profile mt-2" src="../src/profile-pics/androide_16.jpg" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="row">
+                                                <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>POO</strong></small></a></div>
+                                                <div class="col-12"><p class="mb-0"><small>1300</small></p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </ul>
+                        <div style="margin-bottom: 660px;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="../js/jquery-3.4.1.min.js"></script>

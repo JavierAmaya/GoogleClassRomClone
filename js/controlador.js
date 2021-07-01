@@ -8,3 +8,7 @@ const viewClase = () => {
     location.href = "/views/clase.html";
 
 }
+
+const returnIndex = () => {
+    location.href = "/index.html";
+}
