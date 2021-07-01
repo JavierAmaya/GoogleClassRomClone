@@ -25,7 +25,8 @@
             <form class="form-inline my-2 my-lg-0 ml-auto">
                 <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-cog btns-nav fa-lg"></i></button>
                 <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-th btns-nav fa-lg"></i></button>
-                <button class="btn my-2 my-sm-0" type="submit" id="profile-instructor"></button>
+                <!--button class="btn my-2 my-sm-0" type="submit" id="profile-instructor"></button-->
+                <button class="btn my-2 my-sm-0 ml-auto" type="button" id="profile-instructor"  data-toggle="collapse" data-target="#list-instructores" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"></button>
             </form>
         </div>
     </nav>
@@ -177,7 +178,7 @@
             
         </div>
     </div>
-    <!---div oculto-->
+    <!---div oculto navbar vertical-->
     <div class="collapse navbar-vertical sombra mt-0 p-4" id="navbar-vertical">
         <div class="container">
             <div class="row">
@@ -201,6 +202,37 @@
             </div>
         </div>
     </div>
+    <!---div oculto para los usuarios instructores-->
+    <div class="collapse div-list-instructores sombra mt-0 p-1" id="list-instructores">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="border-divs">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ta-r">
+                                <div><button class="btn my-2 my-sm-0 ml-auto" type="button" data-toggle="collapse" data-target="#list-instructores" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-times btns-nav fa-lg ml-auto"></i></button><a class="a-nav-vertical"></a></div>
+                            </li>
+                            <li class="nav-item mb-3" onclick="viewClase('${e.codigo}')">
+                                <div class="row">
+                                    <div class="col-3 pb-0">
+                                        <img class="img-profile mt-2" src="../src/profile-pics/goten.png" alt="">
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="row" id="descrip-clase-${indice}">
+                                        <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>goku</strong></small></a></div>
+                                        <div class="col-12"><p class="mb-0"><small>goku@gmail.com</small></p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

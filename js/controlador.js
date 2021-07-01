@@ -405,3 +405,35 @@ const setClasesInstructor = () => {
 };
 
 setClasesInstructor();
+
+const setListInstructores = () => {
+
+    let dataLocalStorage = JSON.parse(localStorage.getItem('classRoom'));
+
+    document.getElementById('list-instruc').innerHTML = `
+        <li class="nav-item ta-r">
+            <div><button class="btn my-2 my-sm-0 ml-auto" type="button" data-toggle="collapse" data-target="#list-instructores" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-times btns-nav fa-lg ml-auto"></i></button><a class="a-nav-vertical"></a></div>
+        </li>
+    `;
+    dataLocalStorage.forEach(e => {
+        console.log(e.instructor.nombre);
+        document.getElementById('list-instruc').innerHTML +=`
+            <li class="nav-item mb-3" onclick="">
+                <div class="row">
+                    <div class="col-3 pb-0">
+                        <img class="img-profile mt-2" src="./src/profile-pics/${e.instructor.imagen}" alt="">
+                    </div>
+                    <div class="col-9">
+                        <div class="row" id="descrip-clase">
+                            <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>${e.instructor.nombre}</strong></small></a></div>
+                            <div class="col-12"><p class="mb-0"><small>${e.instructor.correo}</small></p></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        `;
+        
+    });
+};
+
+setListInstructores();
