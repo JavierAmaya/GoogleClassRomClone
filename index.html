@@ -19,59 +19,14 @@
             <form class="form-inline my-2 my-lg-0 ml-auto">
                 <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-plus btns-nav fa-lg"></i></button>
                 <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-th btns-nav fa-lg"></i></button>
-                <button class="btn my-2 my-sm-0" type="submit"><img class="img-profile" src="./src/profile-pics/androide_16.jpg" alt=""></button>
+                <button class="btn my-2 my-sm-0" type="submit" id="profile-instructor"></button>
             </form>
         </div>
     </nav>
     <hr>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-3 col-md-3 col-sm-3 mgCardsModal">
-                <div class="card" onclick="viewClase()">
-                    <div>
-                        <img class="card-img-top titleCardModal" src="./src/img/img_reachout.jpg" alt="Card image cap">
-                        <h5 class="title-descrip title-card">Poo</h5>
-                        <p class="title-descrip">1200</p>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <a>12/12/12</a>
-                            <p>tarea 1</p>
-                        </div>
-                        <div>
-                            <a>12/12/12</a>
-                            <p>tarea 1</p>
-                        </div>
-                    </div>
-                    <div class="card-footer text-muted footer-card">
-                        <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-chart-line"></i></button>
-                        <button class="btn my-2 my-sm-0" type="submit"><i class="far fa-folder"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 col-sm-3 mgCardsModal">
-                <div class="card">
-                    <div>
-                        <img class="card-img-top titleCardModal" src="./src/img/img_reachout.jpg" alt="Card image cap">
-                        <h5 class="title-descrip title-card">Poo</h5>
-                        <p class="title-descrip">1200</p>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <a>12/12/12</a>
-                            <p>tarea 1</p>
-                        </div>
-                        <div>
-                            <a>12/12/12</a>
-                            <p>tarea 1</p>
-                        </div>
-                    </div>
-                    <div class="card-footer text-muted footer-card">
-                        <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-chart-line"></i></button>
-                        <button class="btn my-2 my-sm-0" type="submit"><i class="far fa-folder"></i></button>
-                    </div>
-                </div>
-            </div>
+        <div class="row" id="section-clases">
+            <!---cards clases-->
             
         </div>
     </div>
@@ -81,6 +36,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="border-divs">
+                        <button class="btn my-2 my-sm-0 ml-auto" type="button"  data-toggle="collapse" data-target="#navbar-vertical" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars btn-barras btns-nav fa-lg"></i></button>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-3 mt-4">
                                 <div onclick="returnIndex()"><i class="fas fa-home btns-nav fa-lg ml-4"></i><a class="a-nav-vertical"> Todas las clases</a></div>
@@ -88,46 +44,8 @@
                             </li>
                             <h6>Clases</h6>
                             <br>
-                            <div>
-                                <li class="nav-item mb-3">
-                                    <div class="row">
-                                        <div class="col-3 pb-0">
-                                            <img class="img-profile mt-2" src="../src/profile-pics/androide_16.jpg" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="row">
-                                                <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>POO</strong></small></a></div>
-                                                <div class="col-12"><p class="mb-0"><small>1300</small></p></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item mb-3">
-                                    <div class="row">
-                                        <div class="col-3 pb-0">
-                                            <img class="img-profile mt-2" src="../src/profile-pics/androide_16.jpg" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="row">
-                                                <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>POO</strong></small></a></div>
-                                                <div class="col-12"><p class="mb-0"><small>1300</small></p></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item mb-3">
-                                    <div class="row">
-                                        <div class="col-3 pb-0">
-                                            <img class="img-profile mt-2" src="../src/profile-pics/androide_16.jpg" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <div class="row">
-                                                <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>POO</strong></small></a></div>
-                                                <div class="col-12"><p class="mb-0"><small>1300</small></p></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                            <div id="clases-instructor">
+                                <!---clases en navbar-->
                             </div>
                         </ul>
                         <div style="margin-bottom: 660px;"></div>

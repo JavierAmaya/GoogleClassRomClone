@@ -150,3 +150,16 @@ tbody {
     background-color: white
 }
 
+.c-black {
+    color: black;
+}
+
+.b-b{
+    border-bottom: solid;
+    border-color: rgb(0 0 0 / 13%);
+    border-width: 1px;
+}
+
+.ta-l{
+    text-align: left;
+}
