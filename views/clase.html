@@ -202,29 +202,14 @@
             </div>
         </div>
     </div>
-    <!---div oculto para los usuarios instructores-->
+    <!--div para lista de instructores-->
     <div class="collapse div-list-instructores sombra mt-0 p-1" id="list-instructores">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="border-divs">
-                        <ul class="nav flex-column">
-                            <li class="nav-item ta-r">
-                                <div><button class="btn my-2 my-sm-0 ml-auto" type="button" data-toggle="collapse" data-target="#list-instructores" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-times btns-nav fa-lg ml-auto"></i></button><a class="a-nav-vertical"></a></div>
-                            </li>
-                            <li class="nav-item mb-3" onclick="viewClase('${e.codigo}')">
-                                <div class="row">
-                                    <div class="col-3 pb-0">
-                                        <img class="img-profile mt-2" src="../src/profile-pics/goten.png" alt="">
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="row" id="descrip-clase-${indice}">
-                                        <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>goku</strong></small></a></div>
-                                        <div class="col-12"><p class="mb-0"><small>goku@gmail.com</small></p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="nav flex-column" id="list-instruc">
+                            <!---aqui se van a poner los instructores-->
                             
                         </ul>
                     </div>
