@@ -298,114 +298,9 @@ const setDataClassRoom = () => {
 
 setDataClassRoom();
 
-const viewClase = (codClase) => {
-    console.log('clase seleccionada',codClase);
-    location.href = "/TareaExtra_I/views/clase.html";
-    
-    localStorage.setItem('claseSeleccionada',JSON.stringify(codClase));
-    
-}
 
-const setClases = () => {
 
-    let dataLocalStorage = JSON.parse(localStorage.getItem('classRoom'));
-
-    document.getElementById('section-clases').innerHTML = '';
-    
-    dataLocalStorage[0].clases.forEach((clase,index) => {  
-        document.getElementById('section-clases').innerHTML += `
-            <div class="col-xl-3 col-md-3 col-sm-3">
-                <div class="card text-white" onclick="viewClase('${clase.codigo}')">
-                    <img src="./src/img/img_reachout.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title mb-0">${clase.nombreClase}</h5>
-                        <p class="card-text">${clase.seccion}</p>
-                    </div>
-                    <div class="card-body txt-card" id="div-asignaciones-${index}">
-                        
-                    </div>
-                    <div class="card-footer text-muted footer-card">
-                        <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-chart-line"></i></button>
-                        <button class="btn my-2 my-sm-0" type="submit"><i class="far fa-folder"></i></button>
-                    </div>
-                </div>
-            </div>
-        `;
-
-        let div = "div-asignaciones-"+index; 
-        clase.asignaciones.forEach(asignacion => {
-            document.getElementById(div).innerHTML += `
-                <div>
-                    <a>${asignacion.fecha}</a>
-                    <p>${asignacion.titulo}</p>
-                </div>
-            `;
-        });
-    });
-
-};
-
-setClases();
-
-const setInstructor = () => {
-     // set instructor por default por mientras
-    
-    
-    localStorage.setItem('instructor',"goku");
-
-    dataInstructor = localStorage.getItem('instructor');
-    dataClassRoom = JSON.parse(localStorage.getItem('classRoom'));
-
-    if (dataInstructor == dataClassRoom[0].instructor.nombre) {
-        document.getElementById('profile-instructor').innerHTML = `
-            <img class="img-profile" src="./src/profile-pics/${dataClassRoom[0].instructor.imagen}" alt="">
-        `;
-    }
-};
-
-setInstructor();
-
-const setClasesInstructor = () => {
-
-    let dataLocalStorage = JSON.parse(localStorage.getItem('classRoom'));
-    // aqui deberia de ir un foreach para verificar el instructor loggeado
-    let instructor = localStorage.getItem('instructor');
-    /*if (condition) {
-        aqui se valida que las clases sean del instructor
-    }*/
-
-    // sacar la imagen del instructor
-    let imagen = '';
-
-    console.log("instructor",instructor);
-    if (dataLocalStorage[0].instructor.nombre == instructor) {
-        console.log('entro al if');
-        imagen = dataLocalStorage[0].instructor.imagen;
-        console.log(imagen);
-    }
-
-    dataLocalStorage[0].clases.forEach((e,indice) => {
-        document.getElementById('clases-instructor').innerHTML += `
-            <li class="nav-item mb-3" onclick="viewClase('${e.codigo}')">
-                <div class="row">
-                    <div class="col-3 pb-0">
-                        <img class="img-profile mt-2" src="./src/profile-pics/${imagen}" alt="">
-                    </div>
-                    <div class="col-9">
-                        <div class="row" id="descrip-clase-${indice}">
-                        <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>${e.nombreClase}</strong></small></a></div>
-                        <div class="col-12"><p class="mb-0"><small>${e.seccion}</small></p></div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        `;
-    });
-    
-};
-
-setClasesInstructor();
-
+/// funcion para generar la lista de instructores
 const setListInstructores = () => {
 
     let dataLocalStorage = JSON.parse(localStorage.getItem('classRoom'));
@@ -418,7 +313,7 @@ const setListInstructores = () => {
     dataLocalStorage.forEach(e => {
         console.log(e.instructor.nombre);
         document.getElementById('list-instruc').innerHTML +=`
-            <li class="nav-item mb-3" onclick="">
+            <li class="nav-item mb-3" onclick="setInstructor('${e.instructor.nombre}')">
                 <div class="row">
                     <div class="col-3 pb-0">
                         <img class="img-profile mt-2" src="./src/profile-pics/${e.instructor.imagen}" alt="">
@@ -437,3 +332,127 @@ const setListInstructores = () => {
 };
 
 setListInstructores();
+
+/// funcion para cambiar de ruta (URL)
+const viewClase = (codClase) => {
+    console.log('clase seleccionada',codClase);
+    location.href = "/TareaExtra_I/views/clase.html";
+    
+    localStorage.setItem('claseSeleccionada',JSON.stringify(codClase));
+    
+}
+
+/// funcion para llenar las clases en la navbar
+const setClasesInstructor = () => {
+
+    let dataLocalStorage = JSON.parse(localStorage.getItem('classRoom'));
+    let instructor = localStorage.getItem('instructor');
+
+    document.getElementById('clases-instructor').innerHTML = '';
+
+    dataLocalStorage.forEach(element => {
+        
+        if (element.instructor.nombre == instructor) {
+            element.clases.forEach((e,indice) => {
+                document.getElementById('clases-instructor').innerHTML += `
+                    <li class="nav-item mb-3" onclick="viewClase('${e.codigo}')">
+                        <div class="row">
+                            <div class="col-3 pb-0">
+                                <img class="img-profile mt-2" src="./src/profile-pics/${element.instructor.imagen}" alt="">
+                            </div>
+                            <div class="col-9">
+                                <div class="row" id="descrip-clase-${indice}">
+                                <div class="col-12"><a class="navbar-brand title-classRoom mt-0 pt-0 pb-0"><small><strong>${e.nombreClase}</strong></small></a></div>
+                                <div class="col-12"><p class="mb-0"><small>${e.seccion}</small></p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                `;
+            });
+        }
+    });
+};
+
+
+//funcion para mostrar las clases segun el instructor seleccionado
+const setClases = () => {
+
+    let nameInstructor = localStorage.getItem('instructor');
+
+    let dataLocalStorage = JSON.parse(localStorage.getItem('classRoom'));
+
+    document.getElementById('section-clases').innerHTML = '';
+    
+    dataLocalStorage.forEach(element => {
+        if (element.instructor.nombre == nameInstructor) {
+            element.clases.forEach((clase,index) => {  
+                document.getElementById('section-clases').innerHTML += `
+                    <div class="col-xl-3 col-md-3 col-sm-3">
+                        <div class="card text-white" onclick="viewClase('${clase.codigo}')">
+                            <img src="./src/img/img_reachout.jpg" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title mb-0">${clase.nombreClase}</h5>
+                                <p class="card-text">${clase.seccion}</p>
+                            </div>
+                            <div class="card-body txt-card" id="div-asignaciones-${index}">
+                                
+                            </div>
+                            <div class="card-footer text-muted footer-card">
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-chart-line"></i></button>
+                                <button class="btn my-2 my-sm-0" type="submit"><i class="far fa-folder"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+        
+                let div = "div-asignaciones-"+index; 
+                clase.asignaciones.forEach(asignacion => {
+                    document.getElementById(div).innerHTML += `
+                        <div>
+                            <a>${asignacion.fecha}</a>
+                            <p>${asignacion.titulo}</p>
+                        </div>
+                    `;
+                });
+            });
+        }
+    });
+
+    setClasesInstructor();
+
+};
+
+const setInstructor = (nameInstructor) => {
+    // set instructor por default por mientras
+   //localStorage.setItem('instructor',"goku");
+    //location.reload();
+    //document.getElementById('profile-instructor').setAttribute("aria-expanded", false);
+    //document.getElementById('profile-instructor').classList.add('collapsed');
+    document.getElementById('profile-instructor').click();
+
+    if (localStorage.getItem('instructor') == null ) {
+        localStorage.setItem('instructor',nameInstructor)
+    } else {
+        localStorage.setItem('instructor',nameInstructor);
+    }
+    
+    dataClassRoom = JSON.parse(localStorage.getItem('classRoom'));
+
+    dataClassRoom.forEach(element => {
+        if (nameInstructor == element.instructor.nombre) {
+            document.getElementById('profile-instructor').innerHTML = `
+                <img class="img-profile" src="./src/profile-pics/${element.instructor.imagen}" alt="">
+            `;
+            
+        }
+    });
+    setClases();
+    
+};
+
+///if por si se selecciono otro instructor desde la view clase
+// si se seteo algun instructor poes hay que cargar lo del instructor seleccionado
+if (localStorage.getItem('instructor') != null) {
+    setInstructor(localStorage.getItem('instructor'));
+}
